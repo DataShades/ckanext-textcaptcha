@@ -4,7 +4,7 @@ A text based captcha for the [CKAN open data platform](http://ckan.org/) user re
 
 ## Requirements
 
-This extension was developed and tested under CKAN-2.3.2
+Tested in CKAN 2.3 and 2.4
 
 ## Installation
 
