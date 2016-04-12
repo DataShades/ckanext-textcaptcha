@@ -1,6 +1,6 @@
 # CKAN TextCaptcha
 
-A text based captcha for the [CKAN open data platform](http://ckan.org/) user registration form using textcaptcha.com.
+A text based captcha for the [CKAN open data platform](http://ckan.org/) user registration form using http://textcaptcha.com.
 
 ## Requirements
 
