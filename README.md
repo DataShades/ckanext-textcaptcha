@@ -1,6 +1,6 @@
-# CKAN Galleries
+# CKAN TextCaptcha
 
-A package of extensions for the [CKAN open data platform](http://ckan.org/) provides text captcha for user registration form.
+A text based captcha for the [CKAN open data platform](http://ckan.org/) user registration form using textcaptcha.com.
 
 ## Requirements
 
@@ -8,7 +8,7 @@ This extension was developed and tested under CKAN-2.3.2
 
 ## Installation
 
-To install CKAN Text Captha:
+To install CKAN TextCaptcha:
 
 1. Activate your CKAN virtual environment, for example:
 
@@ -28,12 +28,12 @@ To install CKAN Text Captha:
 
 ## Config Settings
 
-1. Add ``ckan.textcaptcha.url`` option to the ``/etc/ckan/default/production.ini`` that defines textcapthca api url. For example http://api.textcaptcha.com/YOUR_EMAIL.json
+1. Add ``ckan.textcaptcha.url`` option to the ``/etc/ckan/default/production.ini`` that defines textcaptcha api url. For example http://api.textcaptcha.com/YOUR_EMAIL.json
 
 
 ## Development Installation
 
-To install CKAN Galleries for development, activate your CKAN virtualenv and
+To install CKAN TextCaptcha for development, activate your CKAN virtualenv and
 do:
 
      $ python setup.py develop
