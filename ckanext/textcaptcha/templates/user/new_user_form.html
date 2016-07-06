@@ -9,7 +9,15 @@
   {{ form.input("password2", id="field-confirm-password", label=_("Confirm"), type="password", placeholder="••••••••", value=data.password2, error=errors.password1, classes=["control-medium"]) }}
 
   {% set textcaptcha_dict = h.get_textcaptcha() %}
-  {{ form.input("textcaptcha", id="field-textcaptcha", label=_('Spam prevention: ') + textcaptcha_dict.q , placeholder="", value='', error=errors.spam_prevention, classes=["control-medium"]) }}
+  {% set error = errors.spam_prevention %}
+  {# form.input("textcaptcha", id="field-textcaptcha", label=_('Spam prevention: ') + textcaptcha_dict.q , placeholder="", value='', error=errors.spam_prevention, classes=["control-medium textcaptcha"]) #}
+  <div class="control-group control-medium textcaptcha {{ " error" if error }}">
+    <label class="control-label" for="field-textcaptcha">Spam prevention</label><label class="control-label textcaptcha-q" for="field-textcaptcha">{{ textcaptcha_dict.q }}</label>
+    <div class="controls ">
+    <input id="field-textcaptcha" type="text" name="textcaptcha" value="" placeholder="">
+    {% if error and error is iterable %}<span class="error-block">{{ error|join(', ') }}</span>{% endif %}
+    </div>
+  </div>
   {{ form.hidden("textcaptcha_opt", value=textcaptcha_dict.a) }}
 
   <div class="form-actions">

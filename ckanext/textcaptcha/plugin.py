@@ -32,6 +32,7 @@ class TextCaptchaPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
 
   def update_config(self, config):
     toolkit.add_template_directory(config, 'templates')
+    toolkit.add_resource('fanstatic', 'textcaptcha')
 
 
 @logic.auth_allow_anonymous_access

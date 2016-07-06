@@ -1,0 +1,14 @@
+.form-horizontal .textcaptcha label {
+	text-align: right;
+}
+
+.form-horizontal .textcaptcha .textcaptcha-q {
+	width: 320px;
+	margin-left: 10px;
+	font-weight: normal;
+	text-align: left;
+}
+
+.form-horizontal .textcaptcha-q:after {
+	content: '';
+}
