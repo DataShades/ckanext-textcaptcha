@@ -2,6 +2,8 @@ import requests
 import hashlib
 import logging
 
+from builtins import str
+
 import ckan.plugins as p
 import ckan.logic as logic
 import ckan.plugins.toolkit as tk
@@ -48,10 +50,10 @@ class TextCaptchaPlugin(p.SingletonPlugin, tk.DefaultDatasetForm):
 def textcaptcha_user_create(context, data_dict=None):
     """Create user."""
     if data_dict:
-        a = data_dict.get("textcaptcha")
+        a = str(data_dict.get("textcaptcha"))
 
         a = (hashlib.md5(a.lower()).hexdigest()
-            if type(a) in (str, unicode) else "  not valid  ")
+            if isinstance(a, str) else "  not valid  ")
 
         v = data_dict.get("textcaptcha_opt")
         log.warn(a)
