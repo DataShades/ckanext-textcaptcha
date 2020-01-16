@@ -52,7 +52,7 @@ def textcaptcha_user_create(context, data_dict=None):
     if data_dict:
         a = str(data_dict.get("textcaptcha"))
 
-        a = (hashlib.md5(a.lower()).hexdigest()
+        a = (hashlib.md5(a.lower().encode('utf-8')).hexdigest()
             if isinstance(a, str) else "  not valid  ")
 
         v = data_dict.get("textcaptcha_opt")
