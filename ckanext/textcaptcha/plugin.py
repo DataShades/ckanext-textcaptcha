@@ -50,10 +50,8 @@ class TextCaptchaPlugin(p.SingletonPlugin, tk.DefaultDatasetForm):
 def textcaptcha_user_create(context, data_dict=None):
     """Create user."""
     if data_dict:
-        a = str(data_dict.get("textcaptcha"))
-
-        a = (hashlib.md5(a.lower().encode('utf-8')).hexdigest()
-            if isinstance(a, str) else "  not valid  ")
+        a = str(data_dict.get("textcaptcha", ""))
+        a = hashlib.md5(a.lower().encode('utf-8')).hexdigest()
 
         v = data_dict.get("textcaptcha_opt")
         log.warn(a)
