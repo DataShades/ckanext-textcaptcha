@@ -1,0 +1,4 @@
+textcaptcha_css:
+  output: ckanext-textcaptcha/textcaptcha_css.css
+  contents:
+    - textcaptcha.css
