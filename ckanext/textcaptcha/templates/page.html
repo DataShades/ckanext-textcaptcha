@@ -1,9 +1,7 @@
 {% ckan_extends %}
 
-{% block scripts %}
+{% block styles %}
+  {{ super() }}
 
-{% set type = "asset" if h.ckan_version() > "2.9" else "resource" %}
-{% include "snippets/textcaptcha_" ~ type ~ ".html" %}
-
-{{ super() }}
+  {% asset "ckanext-textcaptcha/textcaptcha_css" %}
 {% endblock %}
